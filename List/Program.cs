@@ -4,9 +4,13 @@ namespace List
 {
     class Program
     {
-        static void Main(string[] args)
+        static readonly LinkedListStack linkedListStack = new LinkedListStack();
+        static readonly LinkedListQueue queue = new LinkedListQueue();
+        /// <summary>
+        /// Perform the stack operations.
+        /// </summary>
+        public static void StackMenu()
         {
-            LinkedListStack linkedListStack = new LinkedListStack();
             linkedListStack.Push(70);
             linkedListStack.Push(30);
             linkedListStack.Push(56);
@@ -22,6 +26,21 @@ namespace List
             Console.WriteLine("********");
             linkedListStack.Display();
             Console.WriteLine("==============");
+        }
+        /// <summary>
+        /// Perform the queue operations.
+        /// </summary>
+        public static void QueueMenu()
+        {
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            queue.Display();
+        }
+        static void Main(string[] args)
+        {
+            Program.StackMenu();
+            Program.QueueMenu();
         }
     }
 }
