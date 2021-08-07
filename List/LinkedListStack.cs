@@ -13,7 +13,7 @@ namespace List
             this.top = null;
         }
         /// <summary>
-        /// add element into stack.
+        /// Add element into stack.
         /// </summary>
         public void Push(int value)
         {
@@ -26,7 +26,7 @@ namespace List
             Console.WriteLine("{0} pushed to stack", value);
         }
         /// <summary>
-        /// display the stack elements.
+        /// Display the stack elements.
         /// </summary>
         public void Display()
         {
@@ -41,5 +41,48 @@ namespace List
                 temp = temp.next;
             }
         }
+        /// <summary>
+        /// Display the top element of the stack.
+        /// </summary>
+        public void Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is Peek element of Stack", top.data);
+        }
+        /// <summary>
+        /// Remove the top element from stack.
+        /// </summary>
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is Poped from the Stack", top.data);
+            Console.WriteLine("********");
+            top = top.next;
+        }
+        /// <summary>
+        /// It will pop out all the elements from stack until stack is empty.
+        /// </summary>
+        public void ISEmpty()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            while (top != null)
+            {
+                Peek();
+                Pop();
+            }
+        }
+
     }
 }

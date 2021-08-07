@@ -10,7 +10,7 @@ namespace List
         public int data;
         public Node next;
         /// <summary>
-        /// constructor is used to initialized the data.
+        /// Constructor is used to Initialize the data.
         /// </summary>
         /// <param name="data"></param>
         public Node(int data)
