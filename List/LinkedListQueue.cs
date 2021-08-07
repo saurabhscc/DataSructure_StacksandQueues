@@ -46,5 +46,21 @@ namespace List
                 Console.Write("null\n");
             }
         }
+        /// <summary>
+        /// Remove element from Queue.
+        /// </summary>
+        public void Dequeue()
+        {
+            if (front == null)
+            {
+                Console.WriteLine("Queue is empty");
+            }
+            else
+            {
+                Node temp = front;
+                front = front.next;
+                temp.next = null;
+            }
+        }
     }
 }
